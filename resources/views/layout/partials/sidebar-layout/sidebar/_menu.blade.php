@@ -41,6 +41,7 @@
 			</div>
 			<!--end:Menu item-->
 			<!--begin:Menu item-->
+			@if (Auth::user()->hasRole('administrator'))
 			<div data-kt-menu-trigger="click" class="menu-item menu-accordion {{ request()->routeIs('user-management.*') ? 'here show' : '' }}">
 				<!--begin:Menu link-->
 				<span class="menu-link">
@@ -51,6 +52,7 @@
 				<!--end:Menu link-->
 				<!--begin:Menu sub-->
 				<div class="menu-sub menu-sub-accordion">
+			
 					<!--begin:Menu item-->
 					<div class="menu-item">
 						<!--begin:Menu link-->
@@ -63,6 +65,40 @@
 						<!--end:Menu link-->
 					</div>
 					<!--end:Menu item-->
+
+
+
+
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link {{ request()->routeIs('user-management.students.*') ? 'active' : '' }}" href="{{ route('user-management.students.index') }}">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Students</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+
+
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link {{ request()->routeIs('user-management.lecturers.*') ? 'active' : '' }}" href="{{ route('user-management.lecturers.index') }}">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Lecturers</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+
+
+
+
 					<!--begin:Menu item-->
 					<div class="menu-item">
 						<!--begin:Menu link-->
@@ -76,60 +112,74 @@
 					</div>
 					<!--end:Menu item-->
 					<!--begin:Menu item-->
-					<div class="menu-item">
-						<!--begin:Menu link-->
+					<!-- <div class="menu-item">
 						<a class="menu-link {{ request()->routeIs('user-management.permissions.*') ? 'active' : '' }}" href="{{ route('user-management.permissions.index') }}">
 							<span class="menu-bullet">
 								<span class="bullet bullet-dot"></span>
 							</span>
 							<span class="menu-title">Permissions</span>
 						</a>
-						<!--end:Menu link-->
-					</div>
+					</div> -->
 					<!--end:Menu item-->
+				
+				
+			
 				</div>
 				<!--end:Menu sub-->
 			</div>
-			<!--end:Menu item-->
-			<!--begin:Menu item-->
-			<div class="menu-item pt-5">
-				<!--begin:Menu content-->
-				<div class="menu-content">
-					<span class="menu-heading fw-bold text-uppercase fs-7">Help</span>
+
+			@endif
+
+			@if (Auth::user()->hasRole('student')) || (Auth::user()->hasRole('lecturer'))
+			<div data-kt-menu-trigger="click" class="menu-item menu-accordion {{ request()->routeIs('user-management.*') ? 'here show' : '' }}">
+				<!--begin:Menu link-->
+				<span class="menu-link">
+					<span class="menu-icon">{!! getIcon('abstract-28', 'fs-2') !!}</span>
+					<span class="menu-title">Units</span>
+					<span class="menu-arrow"></span>
+				</span>
+				<!--end:Menu link-->
+				<!--begin:Menu sub-->
+				<div class="menu-sub menu-sub-accordion">
+					<!--begin:Menu item-->
+					@if (Auth::user()->hasRole('student'))
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link {{ request()->routeIs('user-management.permissions.*') ? 'active' : '' }}" href="{{ route('user-management.permissions.index') }}">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">My Units</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					@endif
+			
+					@if (Auth::user()->hasRole('lecturer'))
+		
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link {{ request()->routeIs('user-management.permissions.*') ? 'active' : '' }}" href="{{ route('user-management.permissions.index') }}">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Assigned Units</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					@endif
 				</div>
-				<!--end:Menu content-->
+				<!--end:Menu sub-->
 			</div>
-			<!--end:Menu item-->
-			<!--begin:Menu item-->
-			<div class="menu-item">
-				<!--begin:Menu link-->
-				<a class="menu-link" href="https://preview.keenthemes.com/laravel/metronic/docs/base/utilities" target="_blank">
-					<span class="menu-icon">{!! getIcon('rocket', 'fs-2') !!}</span>
-					<span class="menu-title">Components</span>
-				</a>
-				<!--end:Menu link-->
-			</div>
-			<!--end:Menu item-->
-			<!--begin:Menu item-->
-			<div class="menu-item">
-				<!--begin:Menu link-->
-				<a class="menu-link" href="https://preview.keenthemes.com/laravel/metronic/docs" target="_blank">
-					<span class="menu-icon">{!! getIcon('abstract-26', 'fs-2') !!}</span>
-					<span class="menu-title">Documentation</span>
-				</a>
-				<!--end:Menu link-->
-			</div>
-			<!--end:Menu item-->
-			<!--begin:Menu item-->
-			<div class="menu-item">
-				<!--begin:Menu link-->
-				<a class="menu-link" href="https://preview.keenthemes.com/laravel/metronic/docs/changelog" target="_blank">
-					<span class="menu-icon">{!! getIcon('code', 'fs-2') !!}</span>
-					<span class="menu-title">Changelog v8.2.0</span>
-				</a>
-				<!--end:Menu link-->
-			</div>
-			<!--end:Menu item-->
+
+			@endif
+
+
+
+
 		</div>
 		<!--end::Menu-->
 	</div>

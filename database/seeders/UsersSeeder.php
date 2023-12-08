@@ -29,7 +29,8 @@ class UsersSeeder extends Seeder
             'email'             => 'student@demo.com',
             'password'          => Hash::make('demo'),
             'email_verified_at' => now(),
-            'is_student'        => 1
+            'is_student'        => 1,
+            'student_no' => "STD_". fake()->unique()->numberBetween($min = 1000, $max = 6000),
         ]);
 
         $demoUser3 = User::create([

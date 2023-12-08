@@ -20,7 +20,7 @@
 			<!--end::Symbol-->
 			<!--begin::Title-->
 			<div class="d-flex flex-column">
-				<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">BoomApp by Keenthemes</a>
+				<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">BoomApp by Keenthemes fgjb</a>
 				<span class="fs-7 text-muted fw-bold">#45789</span>
 			</div>
 			<!--end::Title-->

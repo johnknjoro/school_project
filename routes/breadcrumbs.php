@@ -28,6 +28,18 @@ Breadcrumbs::for('user-management.users.index', function (BreadcrumbTrail $trail
     $trail->push('Users', route('user-management.users.index'));
 });
 
+Breadcrumbs::for('user-management.students.index', function (BreadcrumbTrail $trail) {
+    $trail->parent('user-management.index');
+    $trail->push('students', route('user-management.students.index'));
+});
+
+Breadcrumbs::for('user-management.lecturers.index', function (BreadcrumbTrail $trail) {
+    $trail->parent('user-management.index');
+    $trail->push('Lecturers', route('user-management.lecturers.index'));
+});
+
+
+
 // Home > Dashboard > User Management > Users > [User]
 Breadcrumbs::for('user-management.users.show', function (BreadcrumbTrail $trail, User $user) {
     $trail->parent('user-management.users.index');

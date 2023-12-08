@@ -18,7 +18,7 @@
 			<!--end::Symbol-->
 			<!--begin::Title-->
 			<div class="d-flex flex-column">
-				<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">BoomApp by Keenthemes</a>
+				<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">BoomApp by Keenthemes hdhfuf</a>
 				<span class="fs-7 text-muted fw-semibold">#45789</span>
 			</div>
 			<!--end::Title-->
@@ -117,4 +117,4 @@
 	</div>
 	<!--end::Items-->
 </div>
-<!--end::Recently viewed-->
+<!--end::Recently viewed-->

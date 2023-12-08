@@ -41,10 +41,9 @@ class AddUserModal extends Component
 
         $roles_description = [
             'administrator' => 'Best for business owners and company administrators',
-            'developer' => 'Best for developers or people primarily using the API',
-            'analyst' => 'Best for people who need full access to analytics data, but don\'t need to update business settings',
-            'support' => 'Best for employees who regularly refund payments and respond to disputes',
-            'trial' => 'Best for people who need to preview content data, but don\'t need to make any updates',
+            'student' => 'Best for student',
+            'Lecturer' => 'Best for L:ecturer',
+         
         ];
 
         foreach ($roles as $i => $role) {
@@ -73,6 +72,9 @@ class AddUserModal extends Component
 
             if (!$this->edit_mode) {
                 $data['password'] = Hash::make($this->email);
+            
+                    $data['is_admin'] = 1;
+    
             }
 
             // Create a new user record in the database

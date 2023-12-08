@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Core\KTBootstrap;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Schema\Builder;
 use Illuminate\Support\ServiceProvider;
 
@@ -25,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Model::unguard();
         // Update defaultStringLength
         Builder::defaultStringLength(191);
 

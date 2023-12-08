@@ -23,14 +23,20 @@ class RolesPermissionsSeeder extends Seeder
         $permissions_by_role = [
             'administrator' => [
                 'user management',
-                'content management',
-                'financial management',
-                'reporting',
-                'payroll',
-                'disputes management',
-                'api controls',
-                'database management',
-                'repository management',
+                // 'content management',
+                // 'financial management',
+                // 'reporting',
+                // 'payroll',
+                // 'disputes management',
+                // 'api controls',
+                // 'database management',
+                // 'repository management',
+                'View students',
+                'Post Assignments',
+                'Fees',
+                'Units',
+                'Transcript',
+                'Exam Card'
             ],
             'student' => [
                 'Fees',

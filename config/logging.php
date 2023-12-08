@@ -117,6 +117,12 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
+        'activity' => [
+            'driver' => 'single', // You can use 'single', 'daily', or other supported drivers
+            'path' => storage_path('logs/activities.log'), // Specify the path to the log file
+            //'level' => 'info', // Log level (info, debug, error, etc.)
+            //'days' => 14, // Number of days to retain log files
+        ],
     ],
 
 ];
