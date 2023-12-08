@@ -5,7 +5,7 @@
 	<!--begin::Heading-->
 	<div class="d-flex flex-stack fw-bold mb-4">
 		<!--begin::Label-->
-		<span class="text-muted fs-6 me-2">Recently Searched:</span>
+		<span class="text-muted fs-6 me-2">Recently Searche as vajd:</span>
 		<!--end::Label-->
 	</div>
 	<!--end::Heading-->

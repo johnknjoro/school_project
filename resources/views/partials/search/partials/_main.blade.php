@@ -3,7 +3,7 @@
 	<!--begin::Heading-->
 	<div class="d-flex flex-stack fw-semibold mb-4">
 		<!--begin::Label-->
-		<span class="text-muted fs-6 me-2">Recently Searched:</span>
+		<span class="text-muted fs-6 me-2">Recently Searched f:</span>
 		<!--end::Label-->
 	</div>
 	<!--end::Heading-->

@@ -159,7 +159,7 @@
 		<!--begin:Col-->
 		<div class="menu-more bg-light col-lg-4 py-3 px-3 py-lg-6 px-lg-6 rounded-end">
 			<!--begin:Heading-->
-			<h4 class="fs-6 fs-lg-4 text-gray-800 fw-bold mt-3 mb-3 ms-4">More Dashboards</h4>
+			<h4 class="fs-6 fs-lg-4 text-gray-800 fw-bold mt-3 mb-3 ms-4">More Dashboards dfbgjk</h4>
 			<!--end:Heading-->
 			<!--begin:Menu item-->
 			<div class="menu-item p-0 m-0">
